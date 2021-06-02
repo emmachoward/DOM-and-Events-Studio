@@ -33,5 +33,24 @@ window.addEventListener("load", function() {
             window.alert("You pressed Cancel!");
           }
     });
+    let rocketImg = this.document.getElementById("rocket");
+    let upButton = this.document.getElementById("up");
+    upButton.addEventListener("click", function(event) {
+        rocketImg.style.bottom += "10px";
+        spaceShuttleHeight.innerHTML += 10000;
+    });
+    let downButton = this.document.getElementById("down");
+    downButton.addEventListener("click", function(event) {
+        rocketImg.style.top += "10px";
+        spaceShuttleHeight.innerHTML -= 10000;
+    });
+    let rightButton = this.document.getElementById("right");
+    rightButton.addEventListener("click", function(event) {
+        rocketImg.style.left += "10px";
+    });
+    let leftButton = this.document.getElementById("left");
+    leftButton.addEventListener("click", function(event) {
+        rocketImg.style.right += "10px";
+    });
     
  });
